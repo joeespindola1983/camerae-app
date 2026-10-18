@@ -1,0 +1,8 @@
+# Automatically detect text files
+* text=auto
+
+# Windows batch scripts
+*.bat text eol=crlf
+
+# Unix shell scripts
+*.sh text eol=lf
