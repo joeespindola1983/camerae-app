@@ -1,0 +1,24 @@
+name: Design tokens
+on:
+  pull_request:
+    paths:
+      - 'design-tokens/**'
+      - 'scripts/design-tokens/**'
+      - 'src/design-system/tokens/generated.ts'
+      - '.github/workflows/design-tokens.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - name: Validate Figma snapshot and generated TypeScript
+        run: node scripts/design-tokens/build.mjs --check
+      - name: Run token tests
+        run: node --test scripts/design-tokens/build.test.mjs
