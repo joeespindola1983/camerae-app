@@ -1,0 +1,1167 @@
+{
+  "format": "camerae.figma.variables.v1",
+  "figmaFileKey": "c8gsnSu31erYFG3u3QMQgN",
+  "collections": {
+    "Primitives": {
+      "modes": [
+        "Value"
+      ],
+      "tokens": {
+        "night/950": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#08091A"
+          },
+          "scopes": []
+        },
+        "night/900": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#0D1035"
+          },
+          "scopes": []
+        },
+        "night/800": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#0E1130"
+          },
+          "scopes": []
+        },
+        "ink/950": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#050200"
+          },
+          "scopes": []
+        },
+        "cream/50": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#FBF5EE"
+          },
+          "scopes": []
+        },
+        "white/1000": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#FFFFFF"
+          },
+          "scopes": []
+        },
+        "text/1000": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#EEF1FF"
+          },
+          "scopes": []
+        },
+        "orange/500": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#FF7A30"
+          },
+          "scopes": []
+        },
+        "blue/500": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#4D6FFF"
+          },
+          "scopes": []
+        },
+        "violet/500": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#8B5CF6"
+          },
+          "scopes": []
+        },
+        "white/700": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#FFFFFFB2"
+          },
+          "scopes": []
+        },
+        "white/600": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#FFFFFF99"
+          },
+          "scopes": []
+        },
+        "white/400": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#FFFFFF66"
+          },
+          "scopes": []
+        },
+        "white/300": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#FFFFFF4D"
+          },
+          "scopes": []
+        },
+        "white/180": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#FFFFFF2E"
+          },
+          "scopes": []
+        },
+        "white/120": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#FFFFFF1F"
+          },
+          "scopes": []
+        },
+        "white/80": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#FFFFFF14"
+          },
+          "scopes": []
+        },
+        "white/70": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#FFFFFF12"
+          },
+          "scopes": []
+        },
+        "black/800": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#000000CC"
+          },
+          "scopes": []
+        },
+        "black/700": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#000000B2"
+          },
+          "scopes": []
+        },
+        "green/500": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#3DDC97"
+          },
+          "scopes": []
+        },
+        "red/500": {
+          "type": "COLOR",
+          "values": {
+            "Value": "#FF5D5D"
+          },
+          "scopes": []
+        }
+      }
+    },
+    "Color": {
+      "modes": [
+        "Default"
+      ],
+      "tokens": {
+        "color/bg/canvas": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/night/950"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "color/bg/surface": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/night/900"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "color/bg/surface-elevated": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/night/800"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "color/bg/warm": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/cream/50"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "color/bg/repeatable": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/orange/500"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "color/bg/astro": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/blue/500"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "color/bg/editor": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/violet/500"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "color/text/primary": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/text/1000"
+            }
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "color/text/inverse": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/ink/950"
+            }
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "color/text/secondary": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/white/700"
+            }
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "color/text/muted": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/white/400"
+            }
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "color/text/subtle": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/white/300"
+            }
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "color/text/repeatable": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/orange/500"
+            }
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "color/text/astro": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/blue/500"
+            }
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "color/text/editor": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/violet/500"
+            }
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "color/border/default": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/white/80"
+            }
+          },
+          "scopes": [
+            "STROKE_COLOR"
+          ]
+        },
+        "color/border/strong": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/white/180"
+            }
+          },
+          "scopes": [
+            "STROKE_COLOR"
+          ]
+        },
+        "color/border/repeatable": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/orange/500"
+            }
+          },
+          "scopes": [
+            "STROKE_COLOR"
+          ]
+        },
+        "color/border/astro": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/blue/500"
+            }
+          },
+          "scopes": [
+            "STROKE_COLOR"
+          ]
+        },
+        "color/border/editor": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/violet/500"
+            }
+          },
+          "scopes": [
+            "STROKE_COLOR"
+          ]
+        },
+        "color/text/success": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/green/500"
+            }
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "color/text/danger": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/red/500"
+            }
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "color/effect/shadow-strong": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/black/800"
+            }
+          },
+          "scopes": [
+            "EFFECT_COLOR"
+          ]
+        },
+        "color/effect/shadow-soft": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/black/700"
+            }
+          },
+          "scopes": [
+            "EFFECT_COLOR"
+          ]
+        },
+        "color/overlay/card": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/white/70"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "color/repeatable/light/background": {
+          "type": "COLOR",
+          "values": {
+            "Default": "#F7F3EE"
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "color/repeatable/light/card": {
+          "type": "COLOR",
+          "values": {
+            "Default": "#FFFFFF"
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "color/repeatable/light/surface": {
+          "type": "COLOR",
+          "values": {
+            "Default": "#EDE8E1"
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "color/repeatable/light/text": {
+          "type": "COLOR",
+          "values": {
+            "Default": "#1A0E00"
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "color/repeatable/light/muted": {
+          "type": "COLOR",
+          "values": {
+            "Default": "#8A6030"
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "color/repeatable/light/accent": {
+          "type": "COLOR",
+          "values": {
+            "Default": "#D4580A"
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        "color/repeatable/light/border": {
+          "type": "COLOR",
+          "values": {
+            "Default": "#E6D9CA"
+          },
+          "scopes": [
+            "STROKE_COLOR"
+          ]
+        },
+        "color/astro/dark/background": {
+          "type": "COLOR",
+          "values": {
+            "Default": "#03050F"
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "color/astro/dark/card": {
+          "type": "COLOR",
+          "values": {
+            "Default": "#080D24"
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "color/astro/dark/surface": {
+          "type": "COLOR",
+          "values": {
+            "Default": "#101833"
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "color/astro/dark/text": {
+          "type": "COLOR",
+          "values": {
+            "Default": "#E8EEFF"
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "color/astro/dark/muted": {
+          "type": "COLOR",
+          "values": {
+            "Default": "#8090C0"
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "color/astro/dark/accent": {
+          "type": "COLOR",
+          "values": {
+            "Default": "#4D6FFF"
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        "color/astro/dark/border": {
+          "type": "COLOR",
+          "values": {
+            "Default": "#1B2B5E"
+          },
+          "scopes": [
+            "STROKE_COLOR"
+          ]
+        },
+        "color/celestial/planet": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Color/color/astro/dark/accent"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        "color/celestial/nebula": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/violet/500"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        "color/celestial/galaxy": {
+          "type": "COLOR",
+          "values": {
+            "Default": {
+              "$alias": "Primitives/green/500"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        }
+      }
+    },
+    "Dimensions": {
+      "modes": [
+        "Value"
+      ],
+      "tokens": {
+        "spacing/2xs": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 4
+          },
+          "scopes": [
+            "GAP"
+          ]
+        },
+        "spacing/xs": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 8
+          },
+          "scopes": [
+            "GAP"
+          ]
+        },
+        "spacing/sm": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 12
+          },
+          "scopes": [
+            "GAP"
+          ]
+        },
+        "spacing/md": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 16
+          },
+          "scopes": [
+            "GAP"
+          ]
+        },
+        "spacing/lg": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 20
+          },
+          "scopes": [
+            "GAP"
+          ]
+        },
+        "spacing/xl": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 24
+          },
+          "scopes": [
+            "GAP"
+          ]
+        },
+        "spacing/2xl": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 32
+          },
+          "scopes": [
+            "GAP"
+          ]
+        },
+        "spacing/3xl": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 48
+          },
+          "scopes": [
+            "GAP"
+          ]
+        },
+        "spacing/4xl": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 64
+          },
+          "scopes": [
+            "GAP"
+          ]
+        },
+        "radius/sm": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 8
+          },
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        "radius/md": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 12
+          },
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        "radius/lg": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 16
+          },
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        "radius/xl": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 20
+          },
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        "radius/2xl": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 28
+          },
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        "radius/device": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 52
+          },
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        "radius/full": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 999
+          },
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        "size/device-width": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 390
+          },
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ]
+        },
+        "size/device-height": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 844
+          },
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ]
+        },
+        "size/touch": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 44
+          },
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ]
+        },
+        "size/icon-sm": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 14
+          },
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ]
+        },
+        "size/icon-md": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 22
+          },
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ]
+        },
+        "size/icon-lg": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 32
+          },
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ]
+        },
+        "size/icon-xl": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 52
+          },
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ]
+        },
+        "size/logo": {
+          "type": "FLOAT",
+          "values": {
+            "Value": 64
+          },
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ]
+        }
+      }
+    },
+    "Workflow Theme": {
+      "modes": [
+        "Repeatable",
+        "Astro",
+        "Editor"
+      ],
+      "tokens": {
+        "theme/background": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Color/color/repeatable/light/background"
+            },
+            "Astro": {
+              "$alias": "Color/color/astro/dark/background"
+            },
+            "Editor": {
+              "$alias": "Color/color/bg/canvas"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "theme/card": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Color/color/repeatable/light/card"
+            },
+            "Astro": {
+              "$alias": "Color/color/astro/dark/card"
+            },
+            "Editor": {
+              "$alias": "Color/color/bg/surface"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "theme/surface": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Color/color/repeatable/light/surface"
+            },
+            "Astro": {
+              "$alias": "Color/color/astro/dark/surface"
+            },
+            "Editor": {
+              "$alias": "Color/color/overlay/card"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ]
+        },
+        "theme/text": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Color/color/repeatable/light/text"
+            },
+            "Astro": {
+              "$alias": "Color/color/astro/dark/text"
+            },
+            "Editor": {
+              "$alias": "Color/color/text/primary"
+            }
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "theme/muted": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Color/color/repeatable/light/muted"
+            },
+            "Astro": {
+              "$alias": "Color/color/astro/dark/muted"
+            },
+            "Editor": {
+              "$alias": "Color/color/text/muted"
+            }
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "theme/accent": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Color/color/repeatable/light/accent"
+            },
+            "Astro": {
+              "$alias": "Color/color/astro/dark/accent"
+            },
+            "Editor": {
+              "$alias": "Primitives/violet/500"
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        "theme/border": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Color/color/repeatable/light/border"
+            },
+            "Astro": {
+              "$alias": "Color/color/astro/dark/border"
+            },
+            "Editor": {
+              "$alias": "Color/color/border/strong"
+            }
+          },
+          "scopes": [
+            "STROKE_COLOR"
+          ]
+        },
+        "theme/on-accent": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Primitives/white/1000"
+            },
+            "Astro": {
+              "$alias": "Primitives/white/1000"
+            },
+            "Editor": {
+              "$alias": "Primitives/white/1000"
+            }
+          },
+          "scopes": [
+            "TEXT_FILL"
+          ]
+        },
+        "capture/foreground": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Primitives/white/1000"
+            },
+            "Astro": {
+              "$alias": "Primitives/white/1000"
+            },
+            "Editor": {
+              "$alias": "Primitives/white/1000"
+            }
+          },
+          "scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ]
+        },
+        "capture/foreground-muted": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Primitives/white/700"
+            },
+            "Astro": {
+              "$alias": "Primitives/white/700"
+            },
+            "Editor": {
+              "$alias": "Primitives/white/700"
+            }
+          },
+          "scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ]
+        },
+        "capture/scrim": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Primitives/black/800"
+            },
+            "Astro": {
+              "$alias": "Primitives/black/800"
+            },
+            "Editor": {
+              "$alias": "Primitives/black/800"
+            }
+          },
+          "scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ]
+        },
+        "capture/hairline": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Primitives/white/400"
+            },
+            "Astro": {
+              "$alias": "Primitives/white/400"
+            },
+            "Editor": {
+              "$alias": "Primitives/white/400"
+            }
+          },
+          "scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ]
+        },
+        "capture/accent": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Color/color/repeatable/light/accent"
+            },
+            "Astro": {
+              "$alias": "Color/color/astro/dark/accent"
+            },
+            "Editor": {
+              "$alias": "Primitives/violet/500"
+            }
+          },
+          "scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ]
+        },
+        "capture/attention": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": "#FFD60A",
+            "Astro": "#FFD60A",
+            "Editor": "#FFD60A"
+          },
+          "scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ]
+        },
+        "capture/success": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Primitives/green/500"
+            },
+            "Astro": {
+              "$alias": "Primitives/green/500"
+            },
+            "Editor": {
+              "$alias": "Primitives/green/500"
+            }
+          },
+          "scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ]
+        },
+        "capture/danger": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Primitives/red/500"
+            },
+            "Astro": {
+              "$alias": "Primitives/red/500"
+            },
+            "Editor": {
+              "$alias": "Primitives/red/500"
+            }
+          },
+          "scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ]
+        },
+        "capture/gridLine": {
+          "type": "COLOR",
+          "values": {
+            "Repeatable": {
+              "$alias": "Primitives/white/1000"
+            },
+            "Astro": {
+              "$alias": "Primitives/white/1000"
+            },
+            "Editor": {
+              "$alias": "Primitives/white/1000"
+            }
+          },
+          "scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ]
+        }
+      }
+    }
+  }
+}

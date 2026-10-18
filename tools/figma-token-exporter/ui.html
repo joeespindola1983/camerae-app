@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"/><style>
+  body{font:13px -apple-system,BlinkMacSystemFont,Arial,sans-serif;margin:16px;color:#151515}
+  h1{font-size:16px;margin:0 0 8px}p{line-height:1.5;color:#555}
+  button{padding:9px 13px;border:1px solid #ccc;border-radius:6px;cursor:pointer;margin-right:6px;background:white}
+  button:disabled{opacity:.5;cursor:not-allowed}
+  #export{background:#151515;color:white;border-color:#151515}
+  textarea{width:100%;box-sizing:border-box;height:125px;resize:none;font:10px monospace;margin-top:12px}
+  #status{font-size:12px;margin-top:9px;min-height:18px}
+</style></head>
+<body>
+  <h1>Camerae · Figma variables</h1>
+  <p>Export all local variables, including modes, aliases and scopes. No network requests. Review the resulting JSON before committing.</p>
+  <button id="export">Read Figma variables</button>
+  <button id="download" disabled>Download JSON</button>
+  <button id="copy" disabled>Copy JSON</button>
+  <div id="status" role="status"></div>
+  <textarea id="json" aria-label="Exported JSON" readonly></textarea>
+<script>
+  let exported = '';
+  const $ = id => document.getElementById(id);
+  $('export').onclick = () => {
+    $('status').textContent = 'Reading local variables…';
+    parent.postMessage({pluginMessage: {type: 'EXPORT'}}, '*');
+  };
+  onmessage = event => {
+    const message = event.data.pluginMessage;
+    if (!message) return;
+    if (message.type === 'ERROR') { $('status').textContent = message.message; return; }
+    if (message.type !== 'DONE') return;
+    exported = JSON.stringify(message.payload, null, 2) + '\n';
+    $('json').value = exported;
+    $('download').disabled = false;
+    $('copy').disabled = false;
+    const collections = Object.values(message.payload.collections);
+    const total = collections.reduce((n, c) => n + Object.keys(c.tokens).length, 0);
+    $('status').textContent = `Exported ${total} variables from ${collections.length} collections.`;
+  };
+  $('download').onclick = () => {
+    const url = URL.createObjectURL(new Blob([exported], {type: 'application/json'}));
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'figma.snapshot.json';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1500);
+  };
+  $('copy').onclick = async () => {
+    try { await navigator.clipboard.writeText(exported); $('status').textContent = 'JSON copied.'; }
+    catch { $('json').focus(); $('json').select(); $('status').textContent = 'Select and copy the JSON manually.'; }
+  };
+</script>
+</body></html>
