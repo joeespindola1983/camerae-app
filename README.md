@@ -1,97 +1,100 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Camerae
 
-# Getting Started
+**Camerae** is an open-source, local-first mobile photography application for capturing a scene and reproducing the same framing later.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+The first milestone is deliberately small:
 
-## Step 1: Start Metro
+1. Capture a photograph.
+2. Keep its original image and metadata on the device.
+3. Find a previous capture.
+4. Open the camera with that capture as a semi-transparent reference overlay.
+5. Create a new capture linked to its reference.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+Advanced perspective correction, camera alignment assistance, cloud sync, accounts, and automated image processing are outside the initial scope.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+> **Status:** early development. The React Native template runs on iOS and Android, and the first `SaveCapture` use case is under test. The actual camera and storage adapters have **not** been implemented yet.
+
+## Technology
+
+- React Native Community CLI **0.87.1** (no Expo)
+- TypeScript
+- iOS and Android native projects
+- Jest and ESLint
+- Native camera, filesystem, and SQLite adapters: **planned, not yet installed**
+- Figma: source of truth for UI screens, components, and visual decisions
+
+## Local environment
+
+- Node version: see `.nvmrc` (initially `24.22.0`)
+- npm, with the committed `package-lock.json`
+- macOS and Xcode for iOS builds
+- Android SDK, Java 17, and an emulator/device for Android builds
+- Bundler/CocoaPods for native iOS dependencies
+
+Install JavaScript dependencies:
 
 ```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
+fnm use # if you use fnm; other .nvmrc-compatible managers are fine
+npm ci
 ```
 
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+For iOS on macOS:
 
 ```sh
 bundle install
+cd ios && bundle exec pod install && cd ..
 ```
 
-Then, and every time you update your native dependencies, run:
+Run Metro in one terminal:
 
 ```sh
-bundle exec pod install
+npm start
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+Then, in a second terminal, run either:
 
 ```sh
-# Using npm
 npm run ios
-
-# OR using Yarn
-yarn ios
+# or
+npm run android
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+### Application IDs
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+The current development builds use the dedicated **QA** identifier on both platforms:
 
-## Step 3: Modify your app
+`com.espindola.camerae.qa`
 
-Now that you have successfully run the app, let's make changes!
+The production identifier, `com.espindola.camerae`, is not yet configured in this rewrite. Do not change identifiers to production or introduce production signing material in routine development.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## Quality checks
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+Run before opening a pull request:
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+```sh
+npx tsc --noEmit
+npm test -- --watch=false
+npm run lint
+```
 
-## Congratulations! :tada:
+## Architecture and data ownership
 
-You've successfully run and modified your React Native App. :partying_face:
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
-### Now what?
+Camerae is **local-first**. Original photographs must be held in app-managed persistent storage; structured metadata belongs in the local database. Temporary camera paths, cached previews, and UI state are not durable sources of truth.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+The first application use case (`SaveCapture`) is deliberately independent of React Native APIs. Native integrations will implement its interfaces and be tested separately.
 
-# Troubleshooting
+## Development process
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+- `main`: stable baseline and releases
+- `develop`: integrated work
+- `feature/*`: new functionality, branched from `develop`
+- `release/*`: release preparation (as needed)
+- `hotfix/*`: fixes to stable releases (as needed)
 
-# Learn More
+Make changes through pull requests. See [CONTRIBUTING.md](CONTRIBUTING.md) for repository rules and review expectations.
 
-To learn more about React Native, take a look at the following resources:
+## Licensing
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Source code is distributed under the terms in [LICENSE](LICENSE) (MIT). Third-party packages retain their own licenses. Before adding a dependency or publishing imagery, icons, fonts, or brand assets, verify that their terms allow distribution in an open-source application. No production signing keys or user photographs should be committed.
